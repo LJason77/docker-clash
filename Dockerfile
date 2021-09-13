@@ -2,7 +2,7 @@ FROM golang:alpine AS builder
 
 RUN apk add -q --no-cache git tzdata
 
-RUN go get -u github.com/Dreamacro/clash
+RUN go install github.com/Dreamacro/clash@latest
 
 FROM alpine:latest
 
